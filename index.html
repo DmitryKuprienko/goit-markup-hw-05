@@ -64,7 +64,13 @@
           <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="main btr">Заказать услугу</button>
         </div>
+        <div class="backdrop-main">
+          <div class="modal-main"></div>
+        </div>
       </section>
+      <div class="backdrop-main">
+        <div class="modal-main"></div>
+      </div>
       <!--особености услуг-->
       <section class="section">
         <div class="container">
@@ -429,5 +435,24 @@
         </div>
       </div>
     </footer>
+    <!-- motalka -->
+    <div class="backdrop is-hidden">
+      <div class="modal"></div>
+    </div>
+    <!-- script -->
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
+        modal: document.querySelector('[data-modal]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+    </script>
   </body>
 </html>
