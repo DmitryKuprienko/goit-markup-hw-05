@@ -128,6 +128,28 @@ p {
   align-items: center;
 }
 
+/* emphasis on navigation- підкреслення навігації */
+.nav.item {
+  position: relative;
+}
+.emphasis:hover::after {
+  opacity: 1;
+}
+.emphasis::after {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+
+  content: ' ';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+
+  background: #2196f3;
+  border-radius: 2px;
+}
+
 /* контакти */
 .contacts.list {
   display: flex;
