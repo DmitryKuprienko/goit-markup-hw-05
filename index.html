@@ -62,7 +62,9 @@
       <section class="section main hero-fon">
         <div class="container main">
           <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="main btr">Заказать услугу</button>
+          <button type="button" class="main btr" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
         <div class="backdrop-main">
           <div class="modal-main"></div>
@@ -436,23 +438,15 @@
       </div>
     </footer>
     <!-- motalka -->
-    <div class="backdrop is-hidden">
-      <div class="modal"></div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-icon">
+            <use href="./images/sprite.svg#shut"></use>
+          </svg>
+        </button>
+      </div>
     </div>
-    <!-- script -->
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        modal: document.querySelector('[data-modal]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      function toggleModal() {
-        refs.modal.classList.toggle('is-hidden');
-      }
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
